@@ -2,35 +2,37 @@
 	<head>
 		<title>SoundCloud celebrats Last Christmas</title>
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-    <script>
-      var submitted = false;
-      var formsubmit = function () {
-        submitted = true;
-        $('form').hide();
-        $('#confirm').show();
-      }
+      <script>
+        var submitted = false;
+        var formsubmit = function () {
+          submitted = true;
+          $('form').hide();
+          $('#confirm').show();
+        }
 
-      $('#add-another').live('click', function() {
-        window.location.hash = '';
-        $('form').show();
-        $('#confirm').hide();
+        $('#add-another').live('click', function() {
+          window.location.hash = '';
+          $('form').show();
+          $('#confirm').hide();
+        });
+
+      $(document).ready(function () {
+        if (window.location.hash === '#thankyou') {
+          $('#confirm').show();
+        } else {
+          $('form').show();
+        }
       });
+      </script>
 
-    $(document).ready(function () {
-      if (window.location.hash === '#thankyou') {
-        $('#confirm').show();
-      } else {
-        $('form').show();
-      }
-    });
-    </script>
-    
 	</head>
 	<body>
 		<header>
-		<img src="img/cloud.png" alt="background" id="bg" /> 
+		<img src="img/cloud.png" alt="background" id="bg" />
+		<div id="star">&nbsp;</div>
 			<h1 class="tk-fertigo-script">SoundCloud celebrates<br /><span>Last Christmas</span><span class="snow">&nbsp;</span></h1>
 			<section>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://lastchristmasparty.com/#thankyou';}"></iframe>
@@ -38,64 +40,61 @@
         <form action="https://docs.google.com/a/soundcloud.com/spreadsheet/formResponse?formkey=dE9nWmlNN2FFZnJScjRsTHNZY2NWekE6MQ&amp;ifq" method="post" target="hidden_iframe" onsubmit="formsubmit();">
   				<h2>Enter your Email for a guest list spot</h2>
 
-          <input type="text" name="entry.1.single" value="" id="entry_1" class="half">
-          <input type="text" name="entry.2.single" value="" id="entry_2" class="half">
-          <input type="text" name="entry.0.single" value="" id="entry_0" class="full">
+          <input type="text" name="entry.1.single" placeholder="First name" id="entry_1" class="half" />
+          <input type="text" name="entry.2.single" placeholder="Last name" id="entry_2" class="half"/>
+          <input type="text" name="entry.0.single" placeholder="Email address" id="entry_0" class="full"/>
 
           <input type="hidden" name="pageNumber" value="0">
           <input type="hidden" name="backupCache" value="">
-          <input type="submit" name="submit" value="Submit" class="full submit">
+          <input type="submit" name="submit" value="Submit" class="submit">
         </form>
 
-        <div id="confirm">
-          You are on the list!
+        <div id="confirm" style="display: none">
+          <h2>You are on the list!</h2>
           <button id="add-another">Add another name</button>
         </div>
 			</section>
 		</header>
 		
-			<div class="mountains">&nbsp;</div>
-			<div class="trees-left">&nbsp;</div>
-			<div class="trees-right">&nbsp;</div>
-			<div class="ground">&nbsp;</div>
-			<div id="deer">&nbsp;</div>
-			<div id="info">
+		<div class="mountains">&nbsp;</div>
+		<div class="trees-left">&nbsp;</div>
+		<div class="trees-right">&nbsp;</div>
+		<div class="ground">&nbsp;</div>
+		<div id="deer">&nbsp;</div>
+		<div id="info">
 			<h3>December 16th 2011 at Prince Charles</h3>
-			<p><b>11:30pm-1.00am</b> only guestlist<br />
+			<p><strong>11:30pm-1.00am</strong> only guestlist<br />
 			<strong>1.00am-4.00am</strong> open for all but still priority guest list line<br />
 			<strong>4.00am-8.00am</strong> open for everyone</p>
-			</div>
-			<div id="edge">&nbsp;</div>
+		</div>
+		<div id="edge">&nbsp;</div>
 			
-			<div id="lineup">
+		<div id="lineup">
 			<h3>Line Up</h3>
+			<div id="underworld">
 			<ul>
-			
-			<li>
-			<span>Daniel Dexter (Pokerflat) Berlin</span><br />
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F23841757&amp;auto_play=false&amp;show_artwork=true&amp;color=ff3300"></iframe>
-			</li>
-			
-			<li>
-			<span>Alland Byallo (Bad Animal, Poker Flat) San Francisco</span><br />
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F65507&amp;auto_play=false&amp;show_artwork=true&amp;color=ff3300"></iframe>
-			</li>
-			
-			<li>
-			<span>Axel Boman (Pampa Records / Studio Barnhus) Stockholm</span><br />
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F5824873&amp;auto_play=false&amp;show_artwork=true&amp;color=ff3300"></iframe>
-			</li>
-			
-			<li>
-			<span>Jon Rust (NTS / Boiler Room / Standard Place) London</span><br />
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F23841757&amp;auto_play=false&amp;show_artwork=true&amp;color=ff3300"></iframe>
-			</li>
-			
+				<li>
+				<span>Daniel Dexter (Pokerflat) Berlin</span><br />
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F23841757&amp;auto_play=false&amp;show_artwork=true"></iframe>
+				</li>
+				
+				<li>
+				<span>Alland Byallo (Bad Animal, Poker Flat) San Francisco</span><br />
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F65507&amp;auto_play=false&amp;show_artwork=true"></iframe>
+				</li>
+				
+				<li>
+				<span>Axel Boman (Pampa Records / Studio Barnhus) Stockholm</span><br />
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F5824873&amp;auto_play=false&amp;show_artwork=true"></iframe>
+				</li>
+				
+				<li>
+				<span>Jon Rust (NTS / Boiler Room / Standard Place) London</span><br />
+				</li>
 			</ul>
 			<div id="left-tripod">&nbsp;</div>
 			<div id="right-tripod">&nbsp;</div>
 			</div>
-		<footer>
-		</footer>
+		</div>
 	</body>
 </html>
