@@ -2,17 +2,55 @@
 	<head>
 		<title>SoundCloud celebrats Last Christmas</title>
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+      var submitted = false;
+      var formsubmit = function () {
+        submitted = true;
+        $('form').hide();
+        $('#confirm').show();
+      }
+
+      $('#add-another').live('click', function() {
+        window.location.hash = '';
+        $('form').show();
+        $('#confirm').hide();
+      });
+
+    $(document).ready(function () {
+      if (window.location.hash === '#thankyou') {
+        $('#confirm').show();
+      } else {
+        $('form').show();
+      }
+    });
+    </script>
+    
 	</head>
 	<body>
 		<header>
 		<img src="img/cloud.png" alt="background" id="bg" /> 
 			<h1 class="tk-fertigo-script">SoundCloud celebrates<br /><span>Last Christmas</span><span class="snow">&nbsp;</span></h1>
 			<section>
-				<h2>Enter your Email for a guest list spot</h2>
-				<form method="post" action="">
-				<input type="text" id="name" name="Name" value="Name" />
-				<input type="text" id="family-name" name="Family-Name" value="Family Name" />
-				<input type="text" id="email" name="Email" value="Email" /></form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://lastchristmasparty.com/#thankyou';}"></iframe>
+
+        <form action="https://docs.google.com/a/soundcloud.com/spreadsheet/formResponse?formkey=dE9nWmlNN2FFZnJScjRsTHNZY2NWekE6MQ&amp;ifq" method="post" target="hidden_iframe" onsubmit="formsubmit();">
+  				<h2>Enter your Email for a guest list spot</h2>
+
+          <input type="text" name="entry.1.single" value="" id="entry_1" class="half">
+          <input type="text" name="entry.2.single" value="" id="entry_2" class="half">
+          <input type="text" name="entry.0.single" value="" id="entry_0" class="full">
+
+          <input type="hidden" name="pageNumber" value="0">
+          <input type="hidden" name="backupCache" value="">
+          <input type="submit" name="submit" value="Submit" class="full submit">
+        </form>
+
+        <div id="confirm">
+          You are on the list!
+          <button id="add-another">Add another name</button>
+        </div>
 			</section>
 		</header>
 		

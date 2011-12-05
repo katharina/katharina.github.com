@@ -67,29 +67,7 @@ form{
 	margin: 0 auto;
 }
 
-#name, #family-name{
-	text-align: center;
-	border: 0;
-	height: 40px;
-	background: white;
-	margin: 10px;
-	width: 247px;
-	color: #666666;
-	font-size: 16px;
-	border: 1px solid #4377A1;
-}
 
-#email{
-	text-align: center;
-	border: 0;
-	height: 40px;
-	background: white;
-	margin: 10px;
-	width: 520px;
-	color: #666666;
-	font-size: 16px;
-	border: 1px solid #4377A1;
-}
 
 .mountains{
 	width: 100%;
@@ -217,5 +195,34 @@ iframe{
 
 /* form */
 
-section form 
+form {
+	display: none;
+}
 
+section form input.half {
+	text-align: center;
+	border: 0;
+	height: 40px;
+	background: white;
+	margin: 10px;
+	width: 247px;
+	color: #666666;
+	font-size: 16px;
+	border: 1px solid #4377A1;
+}
+
+section form input.full {
+	text-align: center;
+	border: 0;
+	height: 40px;
+	background: white;
+	margin: 10px;
+	width: 520px;
+	color: #666666;
+	font-size: 16px;
+	border: 1px solid #4377A1;
+}
+
+#confirm {
+	display: none;
+}
