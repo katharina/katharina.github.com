@@ -16,18 +16,28 @@
           $('#confirm').show();
         }
 
-        $('#add-another').live('click', function() {
-          window.location.hash = '';
-          $('form').show();
-          $('#confirm').hide();
-        });
-
       $(document).ready(function () {
         if (window.location.hash === '#thankyou') {
           $('#confirm').show();
         } else {
           $('form').show();
         }
+
+        $('#add-another').click(function() {
+          window.location.hash = '';
+          $('form').show();
+          $('#confirm').hide();
+        });
+
+        $('input[name=submit]').click(function (e) {
+          var no_email = $('#entry_0').val() === '';
+          var no_fname = $('#entry_1').val() === '';
+          var no_lname = $('#entry_2').val() === '';
+          if (no_email || no_fname || no_lname) {
+            $('#warning').show();
+            e.preventDefault();
+          }
+        });
       });
       </script>
 
@@ -46,7 +56,9 @@
           <input type="text" name="entry.1.single" required placeholder="First name" id="entry_1" class="half" />
           <input type="text" name="entry.2.single" required placeholder="Last name" id="entry_2" class="half"/>
           <input type="email" name="entry.0.single" required placeholder="Email address" id="entry_0" class="full"/>
-                    
+          <br /><span class="small">Only 200 guest list spots available. First come, first served.</span><br />
+
+
           <input type="hidden" name="pageNumber" value="0">
           <input type="hidden" name="backupCache" value="">
           <input type="submit" name="submit" value="Submit" class="submit">
@@ -56,9 +68,14 @@
           <h2>You are on the list!</h2>
           <button id="add-another">Add another name</button>
         </div>
+
+        <div id="warning" style="display: none">
+          <span class="small">All fields are required</span>
+        </div>
+
 			</section>
 		</header>
-		
+
 		<div class="mountains">&nbsp;</div>
 		<div class="trees-left">&nbsp;</div>
 		<div class="trees-right">&nbsp;</div>
@@ -71,7 +88,7 @@
 			<strong>4.00am-8.00am</strong> open for everyone</p>
 		</div>
 		<div id="edge">&nbsp;</div>
-			
+
 		<div id="lineup">
 			<h3>Line Up</h3>
 			<div id="underworld">
@@ -80,17 +97,17 @@
 				<span>Daniel Dexter (Pokerflat) Berlin</span><br />
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F23841757&amp;auto_play=false&amp;show_artwork=true"></iframe>
 				</li>
-				
+
 				<li>
 				<span>Alland Byallo (Bad Animal, Poker Flat) San Francisco</span><br />
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F133074&amp;auto_play=false&amp;show_artwork=true"></iframe>
 				</li>
-				
+
 				<li>
 				<span>Axel Boman (Pampa Records / Studio Barnhus) Stockholm</span><br />
 				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F5824873&amp;auto_play=false&amp;show_artwork=true"></iframe>
 				</li>
-				
+
 				<li>
 				<span>Jon Rust (NTS / Boiler Room / Standard Place) London</span><br />
 				</li>
@@ -99,6 +116,12 @@
 			<div id="right-tripod">&nbsp;</div>
 			</div>
 		</div>
+
+    <div id="footer">
+      <div id="foot">
+        <span class="link"><a href="Soundcloud.">http://soundcloud.com/">Soundcloud.</a></span> <span class="copy">Find and follow friends to share sounds with each other. Add comments and likes to everyone's sounds too.</span>
+      </div>
+    </div>
 	</body>
 	<![if !IE]>
 	   <script src="scripts.js"></script>
