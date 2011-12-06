@@ -43,10 +43,10 @@
         <form action="https://docs.google.com/a/soundcloud.com/spreadsheet/formResponse?formkey=dE9nWmlNN2FFZnJScjRsTHNZY2NWekE6MQ&amp;ifq" method="post" target="hidden_iframe" onsubmit="formsubmit();">
   				<h2>Enter your Email for a guest list spot</h2>
 
-          <input type="text" name="entry.1.single" placeholder="First name" id="entry_1" class="half" />
-          <input type="text" name="entry.2.single" placeholder="Last name" id="entry_2" class="half"/>
-          <input type="text" name="entry.0.single" placeholder="Email address" id="entry_0" class="full"/>
-
+          <input type="text" name="entry.1.single" required placeholder="First name" id="entry_1" class="half" />
+          <input type="text" name="entry.2.single" required placeholder="Last name" id="entry_2" class="half"/>
+          <input type="email" name="entry.0.single" required placeholder="Email address" id="entry_0" class="full"/>
+                    
           <input type="hidden" name="pageNumber" value="0">
           <input type="hidden" name="backupCache" value="">
           <input type="submit" name="submit" value="Submit" class="submit">

@@ -48,7 +48,7 @@ h1{
 	width: 100%;
 	margin: 30px auto 0 auto;
 	text-align: center;
-	height: 180px;
+	height: 210px;
 	font-family: 'Satisfy', cursive;
 }
 
@@ -382,4 +382,15 @@ form input.submit:hover, , #confirm button:hover {
 
 strong {
 	font-weight: bold;
+}
+
+#footer{
+	font-size: 11px;
+	background: rgba(20,19,18,1);
+	padding: 20px 0;
+	color: rgba(95,90,85,1);
+}
+
+#footer a{
+	color: rgba(95,90,85,1);
 }
