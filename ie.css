@@ -1,0 +1,39 @@
+body{
+	background-color: #eef4fb;
+}
+
+header{
+	background-color: #eef4fb;
+}
+
+h1 span.snow{
+display: none;
+}
+
+.ground{
+background-color: #b9d5f1;
+}
+
+#info{
+	background-color: #b9d5f1;
+}
+
+#edge, #lineup{
+	background-color: #4d4844;
+}
+
+#lineup #underworld{
+	background: #4d4844;
+}
+
+.mountains{
+	margin-top: 0px;
+}
+
+#left-tripod{
+	background: #4d4844;
+}
+
+#right-tripod{
+	background: #4d4844;
+}
