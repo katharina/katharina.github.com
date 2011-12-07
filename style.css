@@ -428,7 +428,7 @@ strong {
 	color: #5f5a55;
 }
 
-.small {
+.small, .small a {
    font-size:9px;
    width: 100%;
    text-align: center;
