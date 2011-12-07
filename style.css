@@ -208,7 +208,7 @@ form{
 }
 
 #info h3{
-	font-size: 32px;
+	font-size: 28px;
 	color: #333;
 	background: rgba(185,213,241,1);
 }
@@ -217,6 +217,7 @@ form{
 	line-height: 24px;
 	background: rgba(185,213,241,1);
 	padding-top: 12px;
+	font-size: 16px;
 }
 
 #edge{
