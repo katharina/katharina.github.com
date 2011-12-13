@@ -75,7 +75,7 @@ h1 span.snow{
 	text-indent: -9999px;
 }
 
-h2{
+h2, h2 a{
 	font-size:18px;
 	width: 100%;
 	text-align: center;
@@ -83,6 +83,10 @@ h2{
 	color: #4377a1;
 	line-height: 30px;
 	margin-bottom: 5px;
+}
+
+h2 a:hover {
+	color: #39678d;
 }
 
 form{
